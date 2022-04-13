@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="h0" onmousemove="changer()">click</button>
+</body>
+</html>
+<script>
+    function changer(){
+        let h0=document.getElementById('h0');
+        h0.style.marginLeft= Math.random()*500+"px";
+        h0.style.marginTop= Math.random()*500+"px";
+    }
+</script>
