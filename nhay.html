@@ -5,18 +5,29 @@
     <title>Title</title>
 </head>
 <body>
-<input id="yes" type="checkbox" onclick="">yes</input>
+<input id="h1" type="checkbox" onclick="GOOD()">GOOD</input>
 <br/>
-<input id="no" type="checkbox" onclick="">no</input>
+<input id="h2" type="checkbox" onclick="CHEAP()">CHEAP</input>
 <br/>
-<input id="dung_chon" type="checkbox" onclick="">dung_chon</input>
+<input id="h3" type="checkbox" onclick="FAST()">FAST</input>
 </body>
 </html>
 <script>
-    let yes = document.getElementById(yes).value
-    let no = document.getElementById(no).value
-    let khong_chon = document.getElementById(khong_chon).value
-    function yes(){
-        if ()
+    let a = document.getElementById("h1")
+    let b = document.getElementById("h2")
+    let c = document.getElementById("h3")
+
+    function GOOD() {
+        if (a.checked && b.checked) {
+            c.checked = false;
+        }
+    }function CHEAP() {
+        if (b.checked && c.checked) {
+            a.checked = false;
+        }
+    }function FAST() {
+        if (c.checked && a.checked) {
+            b.checked = false;
+        }
     }
 </script>
