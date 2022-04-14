@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="1.jpg"height="500" width="500" id="img" onclick="changer()"/>
+</body>
+</html>
+<script>
+    let count=1;
+    function changer(){
+        if(count===1){
+            document.getElementById("img").src="2.jpg"
+            count=2;
+    }else if(count===2){
+            document.getElementById("img").src="3.jpg"
+            count=3;
+        }
+        else{
+        document.getElementById("img").src="1.jpg"
+            count=1;
+        }
+    }
+</script>
