@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input id="h1">
+<button onclick="exercise8()">bắt đầu</button>
+</body>
+</html>
+
+<script>
+  function exercise8() {
+    let count = +prompt("nhập số tiền bạn muốn nạp vào đây:")
+    let numMin = prompt("nhập số nhỏ nhất vào đây:")
+    let numMax = prompt("nhập số lớn nhất vào đây:")
+    let ramdomNum = parseInt(Math.random() * (numMax - numMin) + numMin);
+    console.log(ramdomNum)
+    let alive = true;
+    let guessNum = 0
+    do {
+
+      let monney = +prompt("nhập số tiên bạn muốn cược vào đây")
+      for (let i = 0; i < 1; i++) {
+        guessNum = +prompt("nhập số bạn đoán vào đây")
+        if (guessNum === ramdomNum && alive === true) {
+          alert("bạn đã chiến thắng chò chơi")
+          count = count + monney
+          document.getElementById("h1").value = count
+          alive = false;
+          break;
+        } else if (guessNum < ramdomNum || guessNum > ramdomNum) {
+          alert("kết quả sai nhập lại đi")
+          count = count - monney
+          document.getElementById("h1").value = count
+          alive = true;
+        }
+
+      }
+
+    }
+    while (count > 0)
+    {
+      alert("bạn đã hết tiền")
+    }
+  }
+
+</script>
+</body>
+</html>
